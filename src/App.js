@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import './bootstrap.min.css';
+import {useState,useRef} from "react";
+import {Editor, EditorState} from 'draft-js'
+import {Header} from "./client/components/Header";
+import {Textarea} from "./client/components/Textarea";
+import {JsonBlock} from "./client/components/JsonBlock";
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<div className="container d-flex justify-content-center align-items-center flex-column p-1 App">
+    <Header/>
+    <Textarea/>
+    <JsonBlock/>
+</div>
   );
 }
 
